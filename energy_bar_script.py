@@ -6,7 +6,7 @@ import scipy.stats
 # TODO: change name of output file according to what you input
 
 # write titles first
-with open('bar_entries_loc.csv', 'w') as outp:
+with open('bar_entries_combo.csv', 'w') as outp:
     writer = csv.writer(outp)
     writer.writerow(["Instructions", "AVG Power"])
     outp.close()
@@ -15,7 +15,7 @@ with open('bar_entries_loc.csv', 'w') as outp:
 args = sys.argv
 args.pop(0)
 for fil in args:
-    with open(fil, 'r') as inp, open('bar_entries_loc.csv', 'a') as outp:
+    with open(fil, 'r') as inp, open('bar_entries_combo.csv', 'a') as outp:
         writer = csv.writer(outp)
         reader = csv.reader(inp)
         tot_pw = 0.0
