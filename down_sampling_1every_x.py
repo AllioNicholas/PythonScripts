@@ -2,7 +2,7 @@ import csv
 import sys
 
 name_input = sys.argv[2].split(".")[0] # extract input file name
-down_file = name_input + "_down.csv"
+down_file = name_input + "-down.csv"
 
 with open(sys.argv[2], 'r') as inp, open(down_file, 'w') as outp:
     writer = csv.writer(outp)
